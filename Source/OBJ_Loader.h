@@ -142,8 +142,11 @@ namespace objl
 		// Normal Vector
 		Vector3 Normal;
 
+		Vector3 BiTangent;
+		
 		// Texture Coordinate Vector
 		Vector2 TextureCoordinate;
+
 	};
 
 	struct Material
@@ -185,6 +188,7 @@ namespace objl
 		std::string map_d;
 		// Bump Map
 		std::string map_bump;
+
 	};
 
 	// Structure: Mesh
@@ -193,6 +197,7 @@ namespace objl
 	//	a name, a vertex list, and an index list
 	struct Mesh
 	{
+		unsigned int VAO, EBO, VBO;
 		// Default Constructor
 		Mesh()
 		{
